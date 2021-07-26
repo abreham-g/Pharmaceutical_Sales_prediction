@@ -2,22 +2,22 @@
 # Data and Features
 ### You can use the following questions as a guide during your analysis. It is important to come
 ### up with more questions to explore. This is part of our expectation for an excellent analysis.
-● Check for seasonality in both training and test sets - are the seasons similar between
-these two groups?● Check & compare sales behavior before, during and after holidays
-● Find out any seasonal (Christmas, Easter etc) purchase behaviours,
-● What can you say about the correlation between sales and number of customers?
-● How does promo affect sales? Are the promos attracting more customers? How does
-it affect already existing customers?
-● Could the promos be deployed in more effective ways? Which stores should promos
-be deployed in?
-● Trends of customer behavior during store open and closing times
-● Which stores are opened on all weekdays? How does that affect their sales on
-weekends?
-● Check how the assortment type affects sales
-● How does the distance to the next competitor affect sales? What if the store and its
-competitors all happen to be in city centres, does the distance matter in that case?
-● How does the opening or reopening of new competitors affect stores? Check for
-stores with NA as competitor distance but later on has values for competitor distance
+    ● Check for seasonality in both training and test sets - are the seasons similar between
+    these two groups?● Check & compare sales behavior before, during and after holidays
+    ● Find out any seasonal (Christmas, Easter etc) purchase behaviours,
+    ● What can you say about the correlation between sales and number of customers?
+    ● How does promo affect sales? Are the promos attracting more customers? How does
+    it affect already existing customers?
+    ● Could the promos be deployed in more effective ways? Which stores should promos
+    be deployed in?
+    ● Trends of customer behavior during store open and closing times
+    ● Which stores are opened on all weekdays? How does that affect their sales on
+    weekends?
+    ● Check how the assortment type affects sales
+    ● How does the distance to the next competitor affect sales? What if the store and its
+    competitors all happen to be in city centres, does the distance matter in that case?
+    ● How does the opening or reopening of new competitors affect stores? Check for
+    stores with NA as competitor distance but later on has values for competitor distance
 
 # Data fields
 Most of the fields are self-explanatory. The following are descriptions for those that aren't.
