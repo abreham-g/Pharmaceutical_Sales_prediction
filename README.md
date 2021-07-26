@@ -1,6 +1,6 @@
 # Pharmaceutical_Sales_prediction
 # Data and Features
-### You can use the following questions as a guide during your analysis. It is important to come
+### We can use the following questions as a guide during our analysis. It is important to come
 ### up with more questions to explore. This is part of our expectation for an excellent analysis.
     ● Check for seasonality in both training and test sets - are the seasons similar between
     these two groups?● Check & compare sales behavior before, during and after holidays
