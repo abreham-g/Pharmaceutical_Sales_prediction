@@ -15,7 +15,7 @@ class DfHelper:
 
   def save_csv(self, csv_path, index=False):
     try:
-      df.to_csv(csv_path, index=index)
+      df =pd.to_csv(csv_path, index=index)
     #   my_logger.info("file saved as csv")
 
     except Exception:
@@ -24,9 +24,13 @@ class DfHelper:
 
   def read_csv(self, csv_path, missing_values=[]):
     try:
-      df = pd.read_csv(csv_path, na_values=missing_values)
+     
+      df = pd.read_csv(csv_path, parse_dates = True,low_memory = False, index_col = 'Date', na_values=missing_values)
     #   my_logger.debug("file read as csv")
       return df
     except FileNotFoundError:
         pass
     #   my_logger.exception("file not found")
+  
+
+

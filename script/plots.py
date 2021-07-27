@@ -3,6 +3,21 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 import pandas as pd
 
+def plot_outliers(df: pd.DataFrame, labels, typeOfPlot=0):
+    if typeOfPlot in [0, 2]:
+        plt.figure(figsize=(7,7))
+        sns.scatterplot(data=df, x=labels['x'], y=labels['y'])
+        plt.show()
+    if typeOfPlot in [1, 2]:    
+        plt.figure(figsize=(7,7))
+        sns.set(style="whitegrid")
+        sns.boxenplot(data=df,scale="linear",x=labels['x'],y=labels['y'], color="orange")
+        plt.show()
+def plot_line(df: pd.DataFrame,labels) -> None:
+    plt.subplots(figsize = (9, 8))
+    sns.lineplot(data=df, x =labels['x'], y = labels['y'], label="Type A")
+ 
+
 def plot_hist(df: pd.DataFrame, column: str, color: str) -> None:
     plt.figure(figsize=(9, 7))
     sns.displot(data=df, x=column, color=color, kde=True, height=7, aspect=2)
@@ -66,3 +81,14 @@ def plot_scatter(df: pd.DataFrame, x_col: str, y_col: str, title: str, hue: str,
     plt.xticks(fontsize=14)
     plt.yticks(fontsize=14)
     plt.show()
+
+def plot_outliers(df: pd.DataFrame, labels, typeOfPlot=0):
+    if typeOfPlot in [0, 2]:
+        plt.figure(figsize=(7,7))
+        sns.scatterplot(data=df, x=labels['x'], y=labels['y'])
+        plt.show()
+    if typeOfPlot in [1, 2]:    
+        plt.figure(figsize=(7,7))
+        sns.set(style="whitegrid")
+        sns.boxenplot(data=df,scale="linear",x=labels['x'],y=labels['y'], color="orange")
+        plt.show()
