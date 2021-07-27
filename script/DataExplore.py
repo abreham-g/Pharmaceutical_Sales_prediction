@@ -1,3 +1,16 @@
+
+
+from IPython.display import Markdown, display
+
+import pandas as pd
+import numpy as np
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import seaborn as sns
+import scipy.stats as st
+
+sns.set()
+from IPython.display import Markdown, display
 class ExploreData():
     '''Print info, head, shape, missing values of a dataset
     Parameter:
@@ -14,6 +27,8 @@ class ExploreData():
     def data(self):
         '''Return the dataset of current instance'''
         return self.data
+
+
     
     def summary(self):
         '''print summary of the dataset'''
@@ -27,7 +42,7 @@ class ExploreData():
     
     def divider(self):
         '''print a horzontal line'''
-        display(Markdown('---'))
+        display(Markdownaa('---'))
     
     def info(self):
         '''print a concise summary of a DataFrame'''
@@ -48,3 +63,5 @@ class ExploreData():
         '''print out count of  missing value of a dataframe'''
         print('\nMissing values count')
         display(self.data.isna().sum())
+
+       
