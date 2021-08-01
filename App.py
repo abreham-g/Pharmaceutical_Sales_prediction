@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-st.set_page_config(pagetitle="Pharmacutical Sales prediction", layout="wide")
+st.set_page_config(page_title="Pharmacutical Sales prediction", layout="wide")
 
 
 
