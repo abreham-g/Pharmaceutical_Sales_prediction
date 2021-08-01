@@ -16,7 +16,7 @@ def write():
         store = pd.read_csv('src/pages/store.csv', na_values=na_value)
         full_train = pd.merge(left = train, right = store, how = 'inner', left_on = 'Store', right_on = 'Store')
         #st.sidebar.title("Gallery")
-        st.sidebar.subheader("Choose Feature or Aspect to plot")
+        st.sidebar.subheader("Choose Feature to plot")
         plot = st.sidebar.selectbox("feature", ( "Correlation", "SchoolHoliday", "Open/DayOfWeek", 'Promotions', 'State Holiday', 'PromoIntervals', 'Assortment', 'Store Type','Competition',"Seasonality",))
 
         # SchoolHoliday plots
