@@ -17,19 +17,8 @@ def write():
         full_train = pd.merge(left = train, right = store, how = 'inner', left_on = 'Store', right_on = 'Store')
         #st.sidebar.title("Gallery")
         st.sidebar.subheader("Choose Feature to plot")
-        plot = st.sidebar.selectbox("feature", ( "Correlation", "SchoolHoliday", "Open/DayOfWeek", 'Promotions', 'State Holiday', 'PromoIntervals', 'Assortment', 'Store Type','Competition',"Seasonality",))
+        plot = st.sidebar.selectbox("feature", ( "Correlation",'Promotions', 'State Holiday', 'PromoIntervals', 'Assortment','Competition',"Seasonality",))
 
-        # SchoolHoliday plots
-        if plot == 'SchoolHoliday':
-            st.subheader("School Holidays")
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            sns.countplot(x='SchoolHoliday', data=full_train, palette = 'Set2').set_title('a count plot of school holidays')
-            #st.pyplot(fig)
-            fig, (axis1,axis2) = plt.subplots(1,2,figsize=(15,4))
-
-            sns.barplot(x='SchoolHoliday', y='Sales', data=full_train, ax=axis1, palette = 'Set2').set_title('sales across ordinary school days and school holidays')
-            sns.barplot(x='SchoolHoliday', y='Customers', data=full_train, ax=axis2, palette = 'Set2').set_title('no of customers across ordinary school days and school holidays')
-            st.pyplot(fig)
         if plot == 'Competition':
             st.subheader("Competition Distance")
             st.set_option('deprecation.showPyplotGlobalUse', False)
@@ -120,21 +109,6 @@ def write():
             """)
 
 
-        # Open/DayOfWeek plots
-        if plot == 'Open/DayOfWeek':
-            st.subheader("Open status in relation to day of the week")
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            fig, (axis1) = plt.subplots(1,1,figsize=(16,8))
-            sns.countplot(x='Open',hue='DayOfWeek', data=full_train, palette="RdBu_r", ax=axis1)
-            plt.title("store's open status in relation to day of the week")
-            st.pyplot()
-            # sales across dayofweek
-            fig, (axis1,axis2) = plt.subplots(1,2,figsize=(15,4))
-            sns.barplot(x='DayOfWeek', y='Sales', data=full_train, palette = 'RdBu_r', ax=axis1).set_title('sales across different days of the week ')
-            sns.barplot(x='DayOfWeek', y='Customers', data=full_train, palette = 'RdBu_r', ax=axis2).set_title('customers across different days of the week ')
-            st.pyplot()
-
-
         # PromoIntervals plots
         if plot == 'PromoIntervals':
             st.subheader("Promotion Intervals")
@@ -197,17 +171,3 @@ def write():
             """)
 
         # Store Type plots
-        if plot == 'Store Type':
-            st.subheader("Sales across different store types")
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            sns.countplot(x='StoreType', data=full_train, order=['a','b','c', 'd'], palette = ["#95a5a6", "#e74c3c", "#34495e", "#2ecc71"]).set_title('a count plot of StoreTypes')
-            st.pyplot()
-            fig, (axis1,axis2) = plt.subplots(1,2,figsize=(15,4))
-
-            sns.barplot(x='StoreType', y='Sales', data=full_train, ax = axis1, order=['a','b','c', 'd'], palette = ["#95a5a6", "#e74c3c", "#34495e", "#2ecc71"]).set_title('sales across different StoreType')
-            sns.barplot(x='StoreType', y='Customers', data=full_train, ax=axis2, order=['a','b','c', 'd'], palette = ["#95a5a6", "#e74c3c", "#34495e", "#2ecc71"]).set_title('no of customers across diffrent StoreType')
-            st.pyplot()
-            st.write("""
-            Type a is the most popular store type, while b is the least popular.
-            Despite b being the least popular, it records the highest amount of sales.
-            """)

@@ -165,7 +165,7 @@ def write():
         metrics = st.sidebar.multiselect("What metrics to display?", ('Mean Absolute Error', 'Mean Squared Error'))
         
         if st.sidebar.button("Predict", key='predict'):
-            st.subheader("Random Forest Regressor")
+            #st.subheader("Random Forest Regressor")
 
             def load_zipped_pickle(filename):
                 with gzip.open(filename, 'rb') as f:
@@ -196,7 +196,7 @@ def write():
         metrics = st.sidebar.multiselect("What metrics to display?", ('Mean Absolute Error', 'Mean Squared Error'))
         
         if st.sidebar.button("Predict", key='predict'):
-            st.subheader("eXtreme Gradient Boosting(XGB)")
+            #st.subheader("eXtreme Gradient Boosting(XGB)")
             
             def load_zipped_pickle(filename):
                 with gzip.open(filename, 'rb') as f:
@@ -224,7 +224,7 @@ def write():
         metrics = st.sidebar.multiselect("What metrics to display?", ('Mean Absolute Error', 'Mean Squared Error'))
         
         if st.sidebar.button("Predict", key='predict'):
-            st.subheader("Gradient Boosting")
+            #st.subheader("Gradient Boosting")
 
             def load_zipped_pickle(filename):
                 with gzip.open(filename, 'rb') as f:
