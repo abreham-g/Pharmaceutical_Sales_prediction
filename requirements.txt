@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 streamlit==0.84.1
 pandas==1.2.5
 plotly==5.1.0
@@ -31,3 +32,21 @@ numpy==1.19.5
 
 
 >>>>>>> 57f5333fc83daad8e130414c382aa8a27772635c
+||||||| 03dde00
+=======
+streamlit==0.84.1
+pandas==1.2.5
+plotly==5.1.0
+matplotlib==3.4.2
+matplotlib-inline==0.1.2
+numpy==1.19.5
+
+
+
+
+
+
+
+
+
+>>>>>>> f74efb13af341ac47438f7a8c82c6d794ff15101
