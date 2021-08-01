@@ -31,8 +31,8 @@ def main():
         st.sidebar.title("About")
         st.sidebar.info(
         """
-        This App is an end-to-end product that enables the Rosemann pharmaceutical company to 
-        view predictions on sales across their stores and 6 weeks ahead of time and the trends expected.
+        This App is created for Rosemann pharmaceutical company to 
+        view predictions on sales across their stores 
 """
     )
 

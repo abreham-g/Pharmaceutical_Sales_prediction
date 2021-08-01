@@ -7,16 +7,16 @@ import awesome_streamlit as ast
 def write():
    
     with st.spinner("Loading Home ..."):
-        st.title('Rossmann Pharmaceuticals Salse prediction')
+        st.title('Rossmann Pharmaceuticals')
         #st.image('../assets/ross.jpg', use_column_width=True)
         st.write(
             """
-            Rossmann operates over 3,000 drug stores in 7 European countries. Currently, Rossmann store managers are tasked with predicting their daily sales for up to six weeks in advance. Store sales are influenced by many factors, including promotions, competition, school and state holidays, seasonality, and locality.
-            With thousands of individual managers predicting sales based on their unique circumstances, the accuracy of results can be quite varied.
+            Dirk Rossmann GmbH (usual: Rossmann) is one of the largest drug store chains in Europe with around 56,200 employees and more than 4000 stores across Europe. In 2019 Rossmann had more than €10 billion turnover in Germany, Poland, Hungary, the Czech Republic, Turkey, Albania, Kosovo and Spain.
 
-            The company is guided by the following virtues:
-            - **Practical Wisdom.**
-            - **Moral Rule**,  **Moral Virtue** and **Moral Sense**.
-            - **Personal Virtue**.
+The company was founded by Dirk Rossmann with its headquarters in Burgwedel near Hanover in Germany. The Rossmann family owns 60%, and the Hong Kong-based A.S. Watson Group 40% of the company.
+
+The company logo consists of a red name and the symbol of a centaur integrated in the letter O: a mythical creature made of horse and man from Greek mythology, which symbolically stands for "Rossmann" (English: "Horse man"). The company's own brands have a small centaur symbol above the name.
+
+Since 2018, Rossmann has been publishing a sustainability report for the development of corporate climate protection activities.
                 """
         )
