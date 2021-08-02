@@ -17,36 +17,7 @@ def write():
         full_train = pd.merge(left = train, right = store, how = 'inner', left_on = 'Store', right_on = 'Store')
         #st.sidebar.title("Gallery")
         st.sidebar.subheader("Choose Feature to plot")
-        plot = st.sidebar.selectbox("feature", ( "Correlation",'Promotions', 'State Holiday', 'PromoIntervals', 'Assortment','Competition',"Seasonality",))
-
-        if plot == 'Competition':
-            st.subheader("Competition Distance")
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            full_train['Decile_rank'] = pd.qcut(full_train['CompetitionDistance'], 5, labels = False) 
-            new_df = full_train[['Decile_rank', 'Sales']]
-            a = new_df.groupby('Decile_rank').mean()
-            labels = a.index.to_list()
-            sizes = a.Sales.to_list()
-            fig = plt.figure(figsize =(10, 7)) 
-            colors = ['gold', 'yellowgreen', 'purple', 'lightcoral', 'lightskyblue']
-            explode = (0.1, 0.03, 0.03, 0.03, 0.03)  # explode 1st slice
-
-            plt.pie(sizes, explode=explode, labels=labels, colors=colors, shadow=True, autopct='%.2f', startangle=140)
-            plt.title('A piechart indicating mean sales in the 5 CompetitioDIstance decile classes')
-            #st.pyplot()
-            full_train['Decile_rank'] = pd.qcut(full_train['CompetitionDistance'], 5, labels = False) 
-            new_df = full_train[['Decile_rank', 'Customers']]
-            a = new_df.groupby('Decile_rank').mean()
-            labels = a.index.to_list()
-            sizes = a.Customers.to_list()
-            fig = plt.figure(figsize =(10, 7)) 
-            colors = ['gold', 'yellowgreen', 'purple', 'lightcoral', 'lightskyblue']
-            explode = (0.1, 0.03, 0.03, 0.03, 0.03)  # explode 1st slice
-
-            # Plot
-            plt.pie(sizes, explode=explode, labels=labels, colors=colors, shadow=True, autopct='%.2f', startangle=140)
-            plt.title('A piechart indicating mean number of customers in the 5 CompetitioDistance decile classes')
-            st.pyplot(fig)
+        plot = st.sidebar.selectbox("feature", ( "Correlation",'Promotions', 'State Holiday', 'Assortment',"Seasonality",))
 
         if plot == 'Seasonality':
             st.subheader("Daily, Weekly and Monthly Averaged Sales Seasonality Plot")
@@ -107,22 +78,6 @@ def write():
             Sales and Customers have a high correlation. 
             This is because sales are directly dependent on the number of customers.
             """)
-
-
-        # PromoIntervals plots
-        if plot == 'PromoIntervals':
-            st.subheader("Promotion Intervals")
-            st.set_option('deprecation.showPyplotGlobalUse', False)
-            flatui = ["#9b59b6", "#3498db", "#95a5a6", "#e74c3c", "#34495e", "#2ecc71"]
-            sns.countplot(x='PromoInterval', data=full_train, palette = flatui).set_title('PromoInterval value counts')
-            st.pyplot()
-            fig, (axis1,axis2) = plt.subplots(1,2,figsize=(15,4))
-
-            sns.barplot(x='PromoInterval', y='Sales', data=full_train, ax=axis1, palette = flatui).set_title('sales across different promo intervals')
-            sns.barplot(x='PromoInterval', y='Customers', data=full_train, ax=axis2, palette = flatui).set_title('customers across different promo intervals')
-            st.pyplot()
-
-
         # Promotions plots
         if plot == 'Promotions':
             flatui = ["#9b59b6", "#3498db", "#95a5a6", "#e74c3c", "#34495e", "#2ecc71"]
@@ -170,4 +125,3 @@ def write():
             The sales volumes across the 3 classes. Despite  the extra(b) class having the least number of stores, it has the highest volume of sales.
             """)
 
-        # Store Type plots
