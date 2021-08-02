@@ -91,7 +91,7 @@ def write():
 
 
 
-        # State Holiday plots
+
         if plot == 'State Holiday':
             st.subheader("Sales During State Holidays and Ordinary Days")
             st.set_option('deprecation.showPyplotGlobalUse', False)
