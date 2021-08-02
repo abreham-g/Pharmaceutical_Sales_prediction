@@ -3,7 +3,7 @@ import streamlit as st
 import awesome_streamlit as ast
 import src.pages.home
 import src.pages.data 
-import src.pages.rawplots
+import src.pages.plots
 import src.pages.pred
 
 ast.core.services.other.set_logging_format()
@@ -33,10 +33,12 @@ def main():
         """
         This App is created for Rosemann pharmaceutical company to 
         view predictions on sales across their stores 
-"""
+        """
     )
+    elif selection=="Predictions":
+        st.sidebar.title("")
 
-# run it
+
 if __name__ == "__main__":
     main()
-#st.title(option)
+
