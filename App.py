@@ -28,7 +28,7 @@ def main():
     with st.spinner(f"Loading {selection} ..."):
         ast.shared.components.write_page(page)
     if selection =="Home":
-        st.sidebar.title("About")
+        st.sidebar.title("INFORMATION")
         st.sidebar.info(
         """
         This App is created for Rosemann pharmaceutical company to 
