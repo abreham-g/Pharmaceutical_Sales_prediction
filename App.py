@@ -12,7 +12,7 @@ ast.core.services.other.set_logging_format()
 PAGES = {
     "Home": src.pages.home,
     "Data":src.pages.data,
-    "Data visualisations": src.pages.rawplots,
+    "Data visualisations": src.pages.plots,
     "Predictions": src.pages.pred,
 }
 
