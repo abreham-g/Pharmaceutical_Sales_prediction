@@ -18,5 +18,5 @@ cache:
 
 # Command to run tests, e.g. python setup.py test
 script:
-  - cd test/
+  - cd tests/
   - python3 test.py
